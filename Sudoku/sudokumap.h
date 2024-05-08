@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QFileDialog>
 #include <QFile>
+#include <QMessageBox>
 
 class NumNode
 {
@@ -16,7 +17,7 @@ class SudokuMap : public QObject
 {
     Q_OBJECT
 public:
-    explicit SudokuMap(QObject *parent = nullptr);
+    explicit SudokuMap(QString filenameA,QString filenameB,QObject *parent = nullptr);
     ~SudokuMap();
     NumNode **NodeMap;
 

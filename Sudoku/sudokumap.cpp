@@ -1,9 +1,10 @@
 #include "sudokumap.h"
 
-SudokuMap::SudokuMap(QObject *parent)
+SudokuMap::SudokuMap(QString filenameA,QString filenameB,QObject *parent)
     : QObject{parent}
 {
     NodeMap = nullptr;
+    readMap(filenameA,filenameB);
 }
 SudokuMap::~SudokuMap()
 {
@@ -48,5 +49,9 @@ bool SudokuMap::readMap(QString filenameA,QString filenameB)
             else NodeMap[i][j].hide = false;
         }
     }
+    mapFileA.close();
+    mapFileB.close();
     return true;
 }
+
+
