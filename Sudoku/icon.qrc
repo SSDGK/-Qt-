@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/icon1.png</file>
+        <file>icon/icon2.png</file>
+        <file>icon/icon3.png</file>
+        <file>icon/icon4.png</file>
+        <file>icon/icon5.png</file>
+        <file>icon/icon6.png</file>
+        <file>icon/icon7.png</file>
+        <file>icon/icon8.png</file>
+        <file>icon/icon9.png</file>
+        <file>icon/Selected.png</file>
+        <file>icon/Unselected.png</file>
+    </qresource>
+    <qresource prefix="/cicon">
+        <file>icon/cicon1.png</file>
+        <file>icon/cicon2.png</file>
+        <file>icon/cicon3.png</file>
+        <file>icon/cicon4.png</file>
+        <file>icon/cicon5.png</file>
+        <file>icon/cicon6.png</file>
+        <file>icon/cicon7.png</file>
+        <file>icon/cicon8.png</file>
+        <file>icon/cicon9.png</file>
+    </qresource>
+</RCC>

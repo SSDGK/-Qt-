@@ -21,6 +21,30 @@ void GameWidget::on_pushButton_clicked()
 
 void GameWidget::makeMap(SudokuMap *mPMap)
 {
+    for (int i = 0; i < 9; ++i)
+    {
+        QLayoutItem *Line = ui->mapLayout->itemAt(i);
+        QHBoxLayout *LineLayout = qobject_cast<QHBoxLayout*>(Line->widget());
+        if(Line)
+        {
+            for (int j = 0; j < 9; ++j)
+            {
+                QLayoutItem *item = LineLayout->itemAt(j);
+                QToolButton *Button = qobject_cast<QToolButton*>(item->widget());
+                if(mPMap->NodeMap[i][j].hide)
+                {
+                    Button->setIcon(QIcon(":/icon/icon/Unselected.png"));
+                }
+                else
+                {
+                    QString iconPath = QString(":/icon/icon/icon%1.png").arg(mPMap->NodeMap[i][j].num);
+                    Button->setIcon(QIcon(iconPath));
+                }
 
+            }
+
+        }
+
+    }
 
 };
