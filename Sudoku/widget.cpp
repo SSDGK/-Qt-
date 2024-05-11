@@ -23,9 +23,9 @@ void Widget::on_loadButton_clicked()
     bool key = mPMap->readMap(filenameA,filenameB);
     if(key)
     {
-        this->hide();
-        GameWidget *gw = new GameWidget(mPMap,this);
+        GameWidget *gw = new GameWidget(mPMap);
         gw->show();
+        this->hide();
     }
     else
     {
