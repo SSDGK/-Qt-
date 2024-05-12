@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>Ubuntu.qss</file>
+        <file>ConsoleStyle.qss</file>
+    </qresource>
+</RCC>

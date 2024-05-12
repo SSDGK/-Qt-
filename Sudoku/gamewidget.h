@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <sudokumap.h>
 #include <QMessageBox>
+#include <gamewin.h>
+
 
 namespace Ui {
 class GameWidget;

@@ -9,6 +9,7 @@
 
 #include <sudokumap.h>
 #include <gamewidget.h>
+#include <rule.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

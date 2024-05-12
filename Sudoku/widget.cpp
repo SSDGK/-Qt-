@@ -7,6 +7,7 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     mPMap = nullptr;
+    ui->startButton->setIcon(QIcon(":/icon/icon/startButton.png"));
 }
 
 Widget::~Widget()
@@ -27,8 +28,10 @@ void Widget::startGame(QString filenameA,QString filenameB)
     {
         GameWidget *gw = new GameWidget(mPMap);
         connect(gw,SIGNAL(gameEnd()),this,SLOT(reshow()));
+        rule *rl = new rule;
         this->hide();
         gw->show();
+        rl->show();
     }
     else
     {

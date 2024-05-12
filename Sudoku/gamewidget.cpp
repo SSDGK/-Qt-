@@ -32,9 +32,10 @@ GameWidget::~GameWidget()
 
 void GameWidget::endGame()
 {
-    QMessageBox::warning(this,"GameOver","You Win!");
+    GameWin *gwin = new GameWin;
     emit gameEnd();
     this->close();
+    gwin->show();
 }
 void GameWidget::clickedChange()
 {

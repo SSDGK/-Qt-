@@ -11,6 +11,11 @@
         <file>icon/icon9.png</file>
         <file>icon/Selected.png</file>
         <file>icon/Unselected.png</file>
+        <file>icon/rule.png</file>
+        <file>icon/background.jpg</file>
+        <file>icon/startButton.png</file>
+        <file>icon/winicon1.jpg</file>
+        <file>icon/winicon2.jpg</file>
     </qresource>
     <qresource prefix="/cicon">
         <file>icon/cicon1.png</file>

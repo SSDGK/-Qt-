@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,17 +10,23 @@ CONFIG += c++17
 
 SOURCES += \
     gamewidget.cpp \
+    gamewin.cpp \
     main.cpp \
+    rule.cpp \
     sudokumap.cpp \
     widget.cpp
 
 HEADERS += \
     gamewidget.h \
+    gamewin.h \
+    rule.h \
     sudokumap.h \
     widget.h
 
 FORMS += \
     gamewidget.ui \
+    gamewin.ui \
+    rule.ui \
     widget.ui
 
 # Default rules for deployment.
@@ -30,4 +36,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     icon.qrc \
-    map.qrc
+    map.qrc \
+    winwin.qrc
