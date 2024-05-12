@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QDebug>
 #include <QMessageBox>
+#include <QRandomGenerator>
 
 
 #include <sudokumap.h>
@@ -26,11 +27,11 @@ public:
     SudokuMap *mPMap;
 
 private slots:
-    void on_loadButton_clicked();
-
     void on_startButton_clicked();
 
     void reshow();
+
+    void startGame(QString filenameA,QString filenameB);
 
 private:
     Ui::Widget *ui;

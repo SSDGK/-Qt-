@@ -19,11 +19,8 @@ void Widget::reshow()
     this->show();
 }
 
-void Widget::on_loadButton_clicked()
+void Widget::startGame(QString filenameA,QString filenameB)
 {
-
-    QString filenameA = QFileDialog::getOpenFileName(this,"选择地图文件A","F:\\QtProject\\Sudoku\\Map");
-    QString filenameB = QFileDialog::getOpenFileName(this,"选择地图文件B","F:\\QtProject\\Sudoku\\Map");
     mPMap = new SudokuMap(filenameA,filenameB,this);
     bool key = mPMap->readMap(filenameA,filenameB);
     if(key)
@@ -39,9 +36,12 @@ void Widget::on_loadButton_clicked()
     }
 }
 
-
 void Widget::on_startButton_clicked()
 {
-    mPMap = new SudokuMap(":/mapA/Map/testMapA.txt",":/mapB/Map/testMapB.txt");
+    QRandomGenerator rand;
+    int file = rand.generate()%5+0;
+    QString filenameA = QString(":/mapA/Map/MapA%1.txt").arg(file);
+    QString filenameB = QString(":/mapB/Map/MapB%1.txt").arg(file);
+    startGame(filenameA,filenameB);
 }
 

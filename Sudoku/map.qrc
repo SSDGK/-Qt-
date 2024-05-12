@@ -1,8 +1,18 @@
 <RCC>
     <qresource prefix="/mapA">
         <file>Map/testMapA.txt</file>
+        <file>Map/MapA1.txt</file>
+        <file>Map/MapA2.txt</file>
+        <file>Map/MapA3.txt</file>
+        <file>Map/MapA4.txt</file>
+        <file>Map/MapA5.txt</file>
     </qresource>
     <qresource prefix="/mapB">
         <file>Map/testMapB.txt</file>
+        <file>Map/MapB1.txt</file>
+        <file>Map/MapB2.txt</file>
+        <file>Map/MapB3.txt</file>
+        <file>Map/MapB4.txt</file>
+        <file>Map/MapB5.txt</file>
     </qresource>
 </RCC>
