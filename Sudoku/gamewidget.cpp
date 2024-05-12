@@ -16,7 +16,7 @@ GameWidget::GameWidget(SudokuMap *mPMap,QWidget *parent)
             for (int j = 0; j < 9; ++j)
             {
                 QToolButton *Button = qobject_cast<QToolButton*>(LineLayout->itemAt(j)->widget());
-                 connect(Button,&QToolButton::clicked,this,&GameWidget::clickedChange);
+                connect(Button,&QToolButton::clicked,this,&GameWidget::clickedChange);
             }
 
         }
@@ -33,6 +33,8 @@ GameWidget::~GameWidget()
 void GameWidget::endGame()
 {
     QMessageBox::warning(this,"GameOver","You Win!");
+    emit gameEnd();
+    this->close();
 }
 void GameWidget::clickedChange()
 {

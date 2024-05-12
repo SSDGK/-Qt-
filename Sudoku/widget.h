@@ -30,6 +30,8 @@ private slots:
 
     void on_startButton_clicked();
 
+    void reshow();
+
 private:
     Ui::Widget *ui;
 };

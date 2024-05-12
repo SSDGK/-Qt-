@@ -14,6 +14,11 @@ Widget::~Widget()
     delete ui;
 }
 
+void Widget::reshow()
+{
+    this->show();
+}
+
 void Widget::on_loadButton_clicked()
 {
 
@@ -24,8 +29,9 @@ void Widget::on_loadButton_clicked()
     if(key)
     {
         GameWidget *gw = new GameWidget(mPMap);
-        gw->show();
+        connect(gw,SIGNAL(gameEnd()),this,SLOT(reshow()));
         this->hide();
+        gw->show();
     }
     else
     {

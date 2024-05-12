@@ -41,7 +41,8 @@ private slots:
     void on_inpButton_8_clicked();
 
     void on_inpButton_9_clicked();
-
+signals:
+    void gameEnd();
 private:
     Ui::GameWidget *ui;
     //QPainter* mMapPainter;
